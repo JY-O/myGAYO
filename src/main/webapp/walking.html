@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>gayo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/nav.css" rel="stylesheet"> <!--네비게이션-->
+	<link href="css/main.css" rel="stylesheet"> <!--메인페이지-->
+	<link href="css/swiper.min.css" rel="stylesheet"><!--이미지 슬라이드-->
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+	
+</head>
+<body>
+	
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+  <a class="navbar-brand" href="main.html"><img src="images/logo@2x.png" style="width: 84px;" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+		<li class="nav-item dropdown">
+			<a class="nav-link" href="care.html" ><img src="images/service_visit.png" class="hide" alt="" style="width: 30px;">방문 돌봄</a>		
+		</li>
+		<li class="nav-item dropdown">
+		   <a class="nav-link" href="#"><img src="images/service_walk.png" class="hide" alt="" style="width: 30px;">방문 산책</a>
+		</li>
+       <li class="nav-item dropdown">
+		   <a class="nav-link" href="reviews.html"><img src="images/live-comments.png" class="hide" alt="" style="width: 30px;">이용 후기</a>
+		</li> 
+		<li class="nav-item dropdown">
+		   <a class="nav-link" href="mypage_Petsitter.html"><img src="images/benefit1.png" class="hide" alt="" style="width: 30px;">펫시터 지원</a>
+		</li> 
+		<li class="nav-item dropdown">
+		   <a class="nav-link" href="#"><img src="images/faq.png" class="hide" alt="" style="width: 30px;">QnA</a>
+		</li>
+    </ul>
+	  
+	 
+	  
+	  
+  </div>  
+	
+	<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="login.html">Login</a>
+    </li>
+	  <li class="nav-item dropdown">
+      <a class="nav-link" href="signup.html">Sign Up</a>
+    </li>
+  </ul>
+</div>
+	
+	
+</nav>	
+	
+<div style="padding-top: 100px;"></div>
+	<div class="container walking">		
+		<div class="row">
+			<div class="col-2" > 
+				1. 시간 선택 
+			</div>
+			<div class="col-10">
+					<button type="button" class="btn btn-warning">30분</button>
+					<button type="button" class="btn btn-warning">60분</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2" > 
+				2. 날짜 선택 
+			</div>
+			<div class="col-10">
+			<input id="datepicker" width="276" />
+			<script>
+				$('#datepicker').datepicker({
+					uiLibrary: 'bootstrap4'
+				});
+			</script>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				3. 방문 시간 선택
+			</div>
+			<div class="col-1">
+			  <select class="form-control wid5" id="sel1" name="sellist1">
+				<option>오전</option>
+				<option>오후</option>
+			  </select>     
+			</div>
+			<div class="col-1">
+			  <select class="form-control wid5" id="sel1-1" name="sellist1-1">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			  </select>     
+			</div>
+			<div class="col-1">
+			  <select class="form-control wid5" id="sel1-2" name="sellist1-2">
+				<option>00</option>
+				<option>30</option>
+			  </select>     
+			</div>
+			<div class="col-7">
+			  <span style="font-size: 0.8em;color:rgba(211,0,3,1.00);">오전 8:00부터 오후 9:00까지 예약 가능합니다.     </span>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				4. 맡길 동물
+			</div>
+			
+			
+			<div class="col-10">
+				
+				
+				<div id="mainsection">
+				<table>						
+				 <tbody>
+				   <tr>
+					 <td>
+						  <select class="form-control wid10" id="sel2" name="sellist2" onChange="goChange(this.value)">
+								<option>선택</option>
+								<option value="강아지">강아지</option>
+								<option value="고양이">고양이</option>
+						 </select>
+					 </td>
+					 <td>
+					   <select class="form-control wid10" id="sel3" name="sellist3" style="display:none;">
+								<option>소,중형견</option>
+								<option>대형견</option>
+								<option>노견</option>
+						 </select>
+					 </td>
+				   </tr>
+				 </tbody>
+			   </table>
+					<button class="btn btn-dark" onclick="remove_div(this)">-</button>	
+					<button class="btn btn-dark" onclick="add_div()">+</button>
+				</div>	
+				<div id="field"></div>
+				
+				
+			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				5. 특이사항
+			</div>
+			<div class="col-10">
+			<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				6. 기본 연락처
+			</div>
+			<div class="col-10">
+			### - #### - ####
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				7. 긴급 연락처
+			</div>
+			<div class="col-10">
+				 <input type="text" class="form-control2 wid5" id="uphone" name="uphone" required onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"  maxlength="3"> - 
+				 <input type="text" class="form-control2 wid5" id="uphone2" name="uphone2" required onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"  maxlength="4"> - 
+				 <input type="text" class="form-control2 wid5" id="uphone3" name="uphone3" required onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"  maxlength="4">  
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-2" > 
+				8. 비용
+			</div>
+			<div class="col-10">
+			 	&#8361; 00,000원 <button class="btn btn-primary">결제하기</button>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<div class="jumbotron" style="margin-bottom:0">
+		<img class="logo" src="images/footer-logo@2x.png" alt="펫시터 가요" style="width: 112px;">
+		
+  <p class="m_t_30">(주)펫피플 주소 : 서울시 강남구 논현동 20-2 세정빌딩 3층 (주식회사 펫피플)<br>
+사업자 등록번호 : 347-87-00837   |   통신판매업 신고번호 : 제 2017-서울강남-03319<br>
+대표 : 최하연, 이원복   |   개인정보책임자 : 김태호<br><br>
+
+고객센터 문의 : 070 4756 2224 / hello@wayopet.com<br>
+(평일 오전 10시~오후 6시, 주말 및 공휴일 제외)<br><br>
+
+© 2020 Pet People Inc.</p>
+</div>
+
+
+	 <script>
+			function add_div(){
+				var div = document.createElement('div');
+				div.innerHTML = document.getElementById('mainsection').innerHTML;
+				document.getElementById('field').appendChild(div);
+			}
+			function remove_div(obj){
+			document.getElementById('field').removeChild(obj.parentNode);
+			}
+
+		 function goChange(val){
+    if(val=="강아지")    document.all.sel3.style.display="";
+    else    document.all.sel3.style.display="none";
+}
+	</script>
+</body>
+</html>
+
+
