@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ 
+/*탑 슬라이드 이미지 시작*/
+.swiper-container {
+      width: 100%;
+      height: 100%;
+}
+.swiper-slide {
+      text-align: left;
+      font-size: 77px;
+	font-weight: 600;
+	color: #fff;	
+	/*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);*/
+	flex-direction: column;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
+      -webkit-justify-content: left;
+      justify-content: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      -webkit-align-items: left;
+      align-items: left;
+    }
+
+.swiper-slide p{
+	margin-top:180px;
+	margin-bottom: 0;
+	margin-left:150px;
+	line-height:90px;
+	letter-spacing: -1px;
+}
+
+@media (max-width: 768px){
+	.swiper-slide p{
+	margin-left:50px;
+}
+	
+}
+.top_small_text{
+	font-size: 20px;
+	font-weight: 100;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	padding: 30px;
+}
+
+.S1 {background: url(../images/cat-4803841_1920.jpg); background-size: cover;}
+.S2 {background: url(../images/cat-face-1081951_1920.jpg); background-size: cover;}
+.S3 {background: url(../images/pet-1282309_1920.jpg); background-size: cover;}
+.S4 {background: url(../images/cat-2934720_1920.jpg); background-size: cover;}
+
+/*탑 슬라이드 이미지 끝*/  
+
+
+
+
+/*공지사항*/
+.notice{width:100%; height:50px; overflow:hidden; background-color:#262626;top:50px;}
+.rolling{position:relative; width:100%; height:auto;}
+.rolling li{width:100%; height:50px; line-height:50px; overflow: hidden;}
+.rolling li a{color: #fff;text-decoration: none; font-weight: 100;font-size: 15px;}
+.rolling li img {margin-top:-2px;}
+/*공지사항 끝*/
+
+
+
+
+
+/*실시간 이용 후기*/
+.main2 p{
+	font-weight:400;
+	font-size:28px;
+	line-height:39px;
+	color:#42454B;
+	text-align: center;
+}
+
+.main2 .main2_box{	
+	display:flex;
+	flex-direction:column;
+}
+
+.main2 .main2_img{
+	display:flex;
+	flex-direction:row;
+	align-self:center;
+}
+
+.review_box {
+	border: 1px solid rgb(235, 235, 235);
+    box-shadow: rgba(0, 0, 0, 0.07) 1px 1px 12px;
+	height: 250px;
+	padding: 20px;
+}
+
+
+
+
+
+.review1{
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-between;
+}
+.review1 img {
+	 width: 32px;
+	height: 32px; 
+	border-radius: 50%; 
+	object-fit: cover;	
+}
+
+.review2{
+	display: flex; 
+	flex-direction: column;
+}
+.review3{
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-between;
+}
+.review4{
+	display: flex; 
+	flex-direction: column;
+}
+
+.review4 p{
+	font-weight: 400; 
+	font-size: 17px; 
+	line-height: 26px; 
+	color: rgb(57, 60, 71); 
+	margin-bottom: 9px;
+}
+.review5{
+	display: flex; 
+	flex-direction: row;
+}
+.review5 img{
+	width: 12px; 
+	height: 12px; 
+	margin-right: 3px;
+}
+.review6{
+	display: flex; 
+	flex-direction: column; 
+	align-items: flex-end; 
+	margin-top: 5px;
+}
+.review6 img{
+	width: 38px; 
+	height: 17px; 
+	margin-bottom: 6px;
+	border-radius: 0;
+}
+
+.review6 p{
+	font-size: 13px; 
+	font-weight: 700; 
+	color: rgb(158, 164, 179); 
+	line-height: 18px;	
+}
+
+.review7{
+	font-size: 15px; 
+	font-weight: 400; 
+	line-height: 24px; 
+	color: rgb(77, 80, 85); 
+	width: 213px; 
+	margin-top: 18px;
+	display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: normal;
+    height: 8.3em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 768px){
+
+}
+/*후기 끄읏*/
+
+
+
+/*바텀*/
+
+.jumbotron {
+	background-color: #393c45;
+	color: #A0A0A0;
+	border-radius: 0;
+	margin: 57px auto 0px auto;
+    display: block;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+
+
+
+/*회원가입창*/
+.wid5 {
+	width: 5em;
+}
+.wid7 {
+	width: 7em;
+}
+.wid10 {
+	width: 10em;
+}
+
+.form-control2 {
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control3 {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.c_num{
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #343a40;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	color: #fff;
+    background-color: #343a40;
+}
+
+
+
+/*돌봄&산책*/
+
+.walking .row{
+	margin: 20px 0px;
+	vertical-align: middle;
+}
+
+
+
+/*펫시터신청*/
+
+.form-group_end {
+	padding-bottom: 10px;
+}
+
+
+/*이용후기 게시판*/
+
+.review_ a{
+	color: #000;
+}
+.review_star img {
+	width: 70px;
+	padding-left: 0;
+	display: inline;
+	
+}
+
+.review_box2 {
+	border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 1px 1px 12px;
+	height: 250px;
+	padding: 20px;
+}

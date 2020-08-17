@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+<form name = "file_up_test">
+    <input type = "file" name = "file" style="display:'none';">
+</form>
+	
+	
+	<script>/*파일업로드*/
+    function open_filebrowser(form)
+    {
+        form.file.click();
+        form.file_temp.value = form.file.value;
+    }
+</script>
+</body>
+</html>

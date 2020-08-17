@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="customerMapper">
+	<!-- 게시판 글 작성 -->
+
+	<resultMap id="customersResult" type="customer">
+		<result column="CUSTOMER_ID" property="cusId" />
+		<result column="CUSTOMER_NAME" property="cusName" />
+		<result column="CUSTOMER_PW" property="cusPass" />
+		<result column="CUSTOMER_EMAIL" property="cusEmail" />
+		<result column="CUSTOMER_PHONE" property="cusPhone" />
+		<result column="CUSTOMER_STATE" property="cusState" />
+		<result column="CUSTOMER_POSTCODE" property="cusPostcode" />
+		<result column="CUSTOMER_ADDR1" property="cusAdd1" />
+		<result column="CUSTOMER_ADDR2" property="cusAdd2" />
+		<result column="CUSTOMER_BIRTH" property="cusBirth" />
+		<result column="CUSTOMER_Gender" property="cusGender" />
+	</resultMap>
+
+
+	<insert id="register">
+		INSERT INTO customer (cusId, cusName,
+		cusPass,
+		cusEmail, cusPhone,
+		cusState,
+		cusPostCode, cusAddr1, cusAddr2, cusBirth,
+		cusGender)
+		VALUES(#{cusId}, #{cusName},
+		#{cusPass}, #{cusEmail}, #{cusPhone},
+		#{cusState}, #{cusPostCode},#{cusAddr1},
+		#{cusAddr2}, #{cusBirth},
+		#{cusGender})
+	</insert>
+
+</mapper>
